@@ -1,0 +1,153 @@
+[
+  {
+    "id":"c566dc437cdc4355",
+    "type":"tab",
+    "label":"Flow 2",
+    "disabled":false,
+    "info":""
+  },
+  {
+    "id":"c678ed634fb674ca",
+    "type":"json",
+    "z":"c566dc437cdc4355",
+    "name":"",
+    "property":"payload",
+    "action":"",
+    "pretty":false,
+    "x":630,
+    "y":220,
+    "wires":[
+      [
+        "ecb7a3e236d57242"
+      ]
+    ]
+  },
+  {
+    "id":"ecb7a3e236d57242",
+    "type":"function",
+    "z":"c566dc437cdc4355",
+    "name":"extract payload",
+    "func":"msg.timestamp=msg.payload.timestamp_ms\nmsg.payload=msg.payload.PDV1;\nreturn msg; ",
+    "outputs":1,
+    "noerr":0,
+    "initialize":"",
+    "finalize":"",
+    "libs":[
+
+    ],
+    "x":840,
+    "y":220,
+    "wires":[
+      [
+        "56630fc51ac008e9"
+      ]
+    ]
+  },
+  {
+    "id":"56630fc51ac008e9",
+    "type":"rising-edge",
+    "z":"c566dc437cdc4355",
+    "name":"",
+    "threshold":"500",
+    "x":1010,
+    "y":220,
+    "wires":[
+      [
+        "2bc2356fa08e7390"
+      ]
+    ]
+  },
+  {
+    "id":"2bc2356fa08e7390",
+    "type":"function",
+    "z":"c566dc437cdc4355",
+    "name":"PreventiveMaintenanceStop",
+    "func":"msg.payload={\n    \"timestamp_ms\": msg.timestamp,\n    \"state\": 210000\n}\nmsg.topic = \"ia/\"customerID\"/\"location\"/\"AssetID\"/state\"\nreturn msg;",
+    "outputs":1,
+    "noerr":6,
+    "initialize":"",
+    "finalize":"",
+    "libs":[
+
+    ],
+    "x":1240,
+    "y":220,
+    "wires":[
+      [
+        "c38f7819e4a36493"
+      ]
+    ]
+  },
+  {
+    "id":"c38f7819e4a36493",
+    "type":"mqtt out",
+    "z":"c566dc437cdc4355",
+    "d":true,
+    "name":"",
+    "topic":"",
+    "qos":"",
+    "retain":"",
+    "respTopic":"",
+    "contentType":"",
+    "userProps":"",
+    "correl":"",
+    "expiry":"",
+    "broker":"a09f8b607382b939",
+    "x":1450,
+    "y":220,
+    "wires":[
+
+    ]
+  },
+  {
+    "id":"b769a9cf5ae08e33",
+    "type":"mqtt in",
+    "z":"c566dc437cdc4355",
+    "name":"Inductive Sensor",
+    "topic":"",
+    "qos":"2",
+    "datatype":"auto",
+    "broker":"a09f8b607382b939",
+    "nl":false,
+    "rap":true,
+    "rh":0,
+    "x":420,
+    "y":220,
+    "wires":[
+      [
+        "c678ed634fb674ca"
+      ]
+    ]
+  },
+  {
+    "id":"a09f8b607382b939",
+    "type":"mqtt-broker",
+    "name":"",
+    "broker":"united-manufacturing-hub-hivemqce-local-service",
+    "port":"1883",
+    "clientid":"",
+    "usetls":false,
+    "protocolVersion":"4",
+    "keepalive":"60",
+    "cleansession":true,
+    "birthTopic":"",
+    "birthQos":"0",
+    "birthPayload":"",
+    "birthMsg":{
+
+    },
+    "closeTopic":"",
+    "closeQos":"0",
+    "closePayload":"",
+    "closeMsg":{
+
+    },
+    "willTopic":"",
+    "willQos":"0",
+    "willPayload":"",
+    "willMsg":{
+
+    },
+    "sessionExpiry":""
+  }
+]

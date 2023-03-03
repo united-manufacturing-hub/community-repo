@@ -1,0 +1,2510 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 9,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "panels": [],
+      "title": "Warping",
+      "type": "row"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 1,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 0,
+        "y": 1
+      },
+      "id": 10,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "asset": {
+            "index": 3,
+            "label": "warping"
+          },
+          "datasource": {
+            "type": "umh-datasource",
+            "uid": "PEE7824128071FA03"
+          },
+          "labelsField": "",
+          "location": {
+            "index": 2,
+            "label": "company"
+          },
+          "parameterString": "",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "uriPathExtension": "",
+          "value": {
+            "index": 9,
+            "label": "oee"
+          }
+        }
+      ],
+      "title": "OEE",
+      "type": "gauge"
+    },
+    {
+      "backgroundColor": "rgba(255, 255, 255, 0.1)",
+      "colorMaps": [
+        {
+          "$$hashKey": "object:183",
+          "color": "#CCC",
+          "text": "N/A"
+        },
+        {
+          "$$hashKey": "object:294",
+          "color": "#37872D",
+          "text": "Maschine läuft"
+        },
+        {
+          "$$hashKey": "object:297",
+          "color": "#96D98D",
+          "text": "Maschine läuft mit verringerter Geschwindigkeit"
+        },
+        {
+          "$$hashKey": "object:300",
+          "color": "rgb(138, 124, 124)",
+          "text": "Keine Daten"
+        },
+        {
+          "$$hashKey": "object:303",
+          "color": "#B81200",
+          "text": "Unbekannter Stopp"
+        },
+        {
+          "$$hashKey": "object:306",
+          "color": "#FF5A47",
+          "text": "Mikrostopp"
+        },
+        {
+          "$$hashKey": "object:309",
+          "color": "#240046",
+          "text": "Mangel am Einlauf"
+        },
+        {
+          "$$hashKey": "object:312",
+          "color": "#5a189a",
+          "text": "Mangel am Auslauf"
+        },
+        {
+          "$$hashKey": "object:315",
+          "color": "#9D4EDD",
+          "text": "Mangel an Hilfsmaterialien"
+        },
+        {
+          "$$hashKey": "object:318",
+          "color": "#E0AAFF",
+          "text": "Sonstige Materialprobleme"
+        },
+        {
+          "$$hashKey": "object:321",
+          "color": "#B89602",
+          "text": "Rüsten"
+        },
+        {
+          "$$hashKey": "object:324",
+          "color": "#ffda3d",
+          "text": "Reinigen"
+        },
+        {
+          "$$hashKey": "object:327",
+          "color": "#FFEE32",
+          "text": "Leeren"
+        },
+        {
+          "$$hashKey": "object:330",
+          "color": "#FFE570",
+          "text": "Vorbereitung"
+        },
+        {
+          "$$hashKey": "object:333",
+          "color": "rgb(67, 67, 255)",
+          "text": "Maschinenbediener fehlt"
+        },
+        {
+          "$$hashKey": "object:336",
+          "color": "#0077B6",
+          "text": "Pause"
+        },
+        {
+          "$$hashKey": "object:339",
+          "color": "#BC3908",
+          "text": "Maschinenstörung"
+        },
+        {
+          "$$hashKey": "object:342",
+          "color": "#E04209",
+          "text": "Externe Störung"
+        },
+        {
+          "$$hashKey": "object:345",
+          "color": "#FF7900",
+          "text": "Sonstige externe Störung"
+        },
+        {
+          "$$hashKey": "object:348",
+          "color": "#FAA15C",
+          "text": "Wartung"
+        },
+        {
+          "$$hashKey": "object:351",
+          "color": "#FFB607",
+          "text": "Sonstige technische Störung"
+        },
+        {
+          "$$hashKey": "object:173",
+          "color": "#A1ADAD",
+          "text": "Keine Schicht"
+        },
+        {
+          "$$hashKey": "object:176",
+          "color": "#6FFFE9",
+          "text": "Kein Auftrag"
+        },
+        {
+          "$$hashKey": "object:194",
+          "color": "#FF7900",
+          "text": "Kran nicht verfügbar"
+        },
+        {
+          "$$hashKey": "object:295",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Schweißer"
+        },
+        {
+          "$$hashKey": "object:296",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Spreizer"
+        },
+        {
+          "$$hashKey": "object:1442",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Oberboden"
+        },
+        {
+          "$$hashKey": "object:1443",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Unterboden"
+        },
+        {
+          "$$hashKey": "object:5464",
+          "color": "#37872D",
+          "text": "Producing"
+        },
+        {
+          "$$hashKey": "object:5467",
+          "color": "#96D98D",
+          "text": "Producing at lower than set speed"
+        },
+        {
+          "$$hashKey": "object:5470",
+          "color": "rgb(138, 124, 124)",
+          "text": "No data"
+        },
+        {
+          "$$hashKey": "object:5473",
+          "color": "#B81200",
+          "text": "Unknown stop"
+        },
+        {
+          "$$hashKey": "object:5476",
+          "color": "#FF5A47",
+          "text": "Microstop"
+        },
+        {
+          "$$hashKey": "object:5479",
+          "color": "#240046",
+          "text": "Inlet jam"
+        },
+        {
+          "$$hashKey": "object:5482",
+          "color": "#5a189a",
+          "text": "Outlet jam"
+        },
+        {
+          "$$hashKey": "object:5485",
+          "color": "#9D4EDD",
+          "text": "Congestion in the bypass flow"
+        },
+        {
+          "$$hashKey": "object:5488",
+          "color": "#E0AAFF",
+          "text": "Other material issues"
+        },
+        {
+          "$$hashKey": "object:5491",
+          "color": "#B89602",
+          "text": "Changeover"
+        },
+        {
+          "$$hashKey": "object:5494",
+          "color": "#ffda3d",
+          "text": "Cleaning"
+        },
+        {
+          "$$hashKey": "object:5497",
+          "color": "#FFEE32",
+          "text": "Emptying"
+        },
+        {
+          "$$hashKey": "object:5500",
+          "color": "#FFE570",
+          "text": "Setting up"
+        },
+        {
+          "$$hashKey": "object:5503",
+          "color": "rgb(67, 67, 255)",
+          "text": "Operator missing"
+        },
+        {
+          "$$hashKey": "object:5506",
+          "color": "#0077B6",
+          "text": "Break"
+        },
+        {
+          "$$hashKey": "object:5509",
+          "color": "#BC3908",
+          "text": "Equipment failure"
+        },
+        {
+          "$$hashKey": "object:5512",
+          "color": "#E04209",
+          "text": "External failure"
+        },
+        {
+          "$$hashKey": "object:5515",
+          "color": "#FF7900",
+          "text": "External interference"
+        },
+        {
+          "$$hashKey": "object:5518",
+          "color": "#FAA15C",
+          "text": "Maintenance"
+        },
+        {
+          "$$hashKey": "object:5521",
+          "color": "#FFB607",
+          "text": "Other technical issue"
+        },
+        {
+          "$$hashKey": "object:5524",
+          "color": "#A1ADAD",
+          "text": "No shift"
+        },
+        {
+          "$$hashKey": "object:5527",
+          "color": "#6FFFE9",
+          "text": "No order"
+        },
+        {
+          "$$hashKey": "object:5530",
+          "color": "#FF7900",
+          "text": "Crane not available"
+        },
+        {
+          "$$hashKey": "object:5539",
+          "color": "#FA6400",
+          "text": "Equipment failure welder"
+        },
+        {
+          "$$hashKey": "object:5542",
+          "color": "#FA6400",
+          "text": "Equipment failure expender"
+        },
+        {
+          "$$hashKey": "object:5545",
+          "color": "#FA6400",
+          "text": "Equipment failure palletizer"
+        },
+        {
+          "$$hashKey": "object:5548",
+          "color": "#FA6400",
+          "text": "Equipment failure underbody"
+        },
+        {
+          "$$hashKey": "object:5551",
+          "color": "#FA6400",
+          "text": "Equipment failure topcover"
+        }
+      ],
+      "crosshairColor": "#8F070C",
+      "display": "timeline",
+      "expandFromQueryS": 0,
+      "extendLastValue": true,
+      "gridPos": {
+        "h": 5,
+        "w": 22,
+        "x": 2,
+        "y": 1
+      },
+      "highlightOnMouseover": true,
+      "id": 34,
+      "interval": "5m",
+      "legendSortBy": "-ms",
+      "lineColor": "rgba(0,0,0,0.1)",
+      "maxDataPoints": 60,
+      "metricNameColor": "rgb(0, 0, 0)",
+      "pluginVersion": "7.3.7",
+      "rangeMaps": [
+        {
+          "$$hashKey": "object:188",
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "rowHeight": 50,
+      "showDistinctCount": false,
+      "showLegend": true,
+      "showLegendCounts": false,
+      "showLegendNames": false,
+      "showLegendPercent": true,
+      "showLegendTime": false,
+      "showLegendValues": true,
+      "showTimeAxis": true,
+      "showTransitionCount": false,
+      "targets": [
+        {
+          "asset": {
+            "index": 3,
+            "label": "warping"
+          },
+          "datasource": {
+            "type": "umh-datasource",
+            "uid": "PEE7824128071FA03"
+          },
+          "labelsField": "",
+          "location": {
+            "index": 2,
+            "label": "company"
+          },
+          "parameterString": "",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "uriPathExtension": "",
+          "value": {
+            "index": 1,
+            "label": "state"
+          }
+        }
+      ],
+      "textSize": 24,
+      "textSizeTime": 12,
+      "timeOptions": [
+        {
+          "name": "Years",
+          "value": "years"
+        },
+        {
+          "name": "Months",
+          "value": "months"
+        },
+        {
+          "name": "Weeks",
+          "value": "weeks"
+        },
+        {
+          "name": "Days",
+          "value": "days"
+        },
+        {
+          "name": "Hours",
+          "value": "hours"
+        },
+        {
+          "name": "Minutes",
+          "value": "minutes"
+        },
+        {
+          "name": "Seconds",
+          "value": "seconds"
+        },
+        {
+          "name": "Milliseconds",
+          "value": "milliseconds"
+        }
+      ],
+      "timePrecision": {
+        "name": "Minutes",
+        "value": "minutes"
+      },
+      "timeTextColor": "rgb(56, 56, 56)",
+      "title": "Timeline",
+      "type": "natel-discrete-panel",
+      "units": "short",
+      "use12HourClock": false,
+      "useTimePrecision": false,
+      "valueMaps": [
+        {
+          "$$hashKey": "object:3779",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueTextColor": "rgb(255, 255, 255)",
+      "writeAllValues": false,
+      "writeLastValue": true,
+      "writeMetricNames": false
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 6
+      },
+      "id": 4,
+      "panels": [],
+      "title": "Weaving",
+      "type": "row"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 1,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 0,
+        "y": 7
+      },
+      "id": 39,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "asset": {
+            "index": 0,
+            "label": "cutting"
+          },
+          "datasource": {
+            "type": "umh-datasource",
+            "uid": "PEE7824128071FA03"
+          },
+          "labelsField": "",
+          "location": {
+            "index": 1,
+            "label": "company"
+          },
+          "parameterString": "",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "uriPathExtension": "",
+          "value": {
+            "index": 9,
+            "label": "oee"
+          }
+        }
+      ],
+      "title": "OEE",
+      "type": "gauge"
+    },
+    {
+      "backgroundColor": "rgba(255, 255, 255, 0.1)",
+      "colorMaps": [
+        {
+          "$$hashKey": "object:183",
+          "color": "#CCC",
+          "text": "N/A"
+        },
+        {
+          "$$hashKey": "object:294",
+          "color": "#37872D",
+          "text": "Maschine läuft"
+        },
+        {
+          "$$hashKey": "object:297",
+          "color": "#96D98D",
+          "text": "Maschine läuft mit verringerter Geschwindigkeit"
+        },
+        {
+          "$$hashKey": "object:300",
+          "color": "rgb(138, 124, 124)",
+          "text": "Keine Daten"
+        },
+        {
+          "$$hashKey": "object:303",
+          "color": "#B81200",
+          "text": "Unbekannter Stopp"
+        },
+        {
+          "$$hashKey": "object:306",
+          "color": "#FF5A47",
+          "text": "Mikrostopp"
+        },
+        {
+          "$$hashKey": "object:309",
+          "color": "#240046",
+          "text": "Mangel am Einlauf"
+        },
+        {
+          "$$hashKey": "object:312",
+          "color": "#5a189a",
+          "text": "Mangel am Auslauf"
+        },
+        {
+          "$$hashKey": "object:315",
+          "color": "#9D4EDD",
+          "text": "Mangel an Hilfsmaterialien"
+        },
+        {
+          "$$hashKey": "object:318",
+          "color": "#E0AAFF",
+          "text": "Sonstige Materialprobleme"
+        },
+        {
+          "$$hashKey": "object:321",
+          "color": "#B89602",
+          "text": "Rüsten"
+        },
+        {
+          "$$hashKey": "object:324",
+          "color": "#ffda3d",
+          "text": "Reinigen"
+        },
+        {
+          "$$hashKey": "object:327",
+          "color": "#FFEE32",
+          "text": "Leeren"
+        },
+        {
+          "$$hashKey": "object:330",
+          "color": "#FFE570",
+          "text": "Vorbereitung"
+        },
+        {
+          "$$hashKey": "object:333",
+          "color": "rgb(67, 67, 255)",
+          "text": "Maschinenbediener fehlt"
+        },
+        {
+          "$$hashKey": "object:336",
+          "color": "#0077B6",
+          "text": "Pause"
+        },
+        {
+          "$$hashKey": "object:339",
+          "color": "#BC3908",
+          "text": "Maschinenstörung"
+        },
+        {
+          "$$hashKey": "object:342",
+          "color": "#E04209",
+          "text": "Externe Störung"
+        },
+        {
+          "$$hashKey": "object:345",
+          "color": "#FF7900",
+          "text": "Sonstige externe Störung"
+        },
+        {
+          "$$hashKey": "object:348",
+          "color": "#FAA15C",
+          "text": "Wartung"
+        },
+        {
+          "$$hashKey": "object:351",
+          "color": "#FFB607",
+          "text": "Sonstige technische Störung"
+        },
+        {
+          "$$hashKey": "object:173",
+          "color": "#A1ADAD",
+          "text": "Keine Schicht"
+        },
+        {
+          "$$hashKey": "object:176",
+          "color": "#6FFFE9",
+          "text": "Kein Auftrag"
+        },
+        {
+          "$$hashKey": "object:194",
+          "color": "#FF7900",
+          "text": "Kran nicht verfügbar"
+        },
+        {
+          "$$hashKey": "object:295",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Schweißer"
+        },
+        {
+          "$$hashKey": "object:296",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Spreizer"
+        },
+        {
+          "$$hashKey": "object:1442",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Oberboden"
+        },
+        {
+          "$$hashKey": "object:1443",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Unterboden"
+        },
+        {
+          "$$hashKey": "object:5464",
+          "color": "#37872D",
+          "text": "Producing"
+        },
+        {
+          "$$hashKey": "object:5467",
+          "color": "#96D98D",
+          "text": "Producing at lower than set speed"
+        },
+        {
+          "$$hashKey": "object:5470",
+          "color": "rgb(138, 124, 124)",
+          "text": "No data"
+        },
+        {
+          "$$hashKey": "object:5473",
+          "color": "#B81200",
+          "text": "Unknown stop"
+        },
+        {
+          "$$hashKey": "object:5476",
+          "color": "#FF5A47",
+          "text": "Microstop"
+        },
+        {
+          "$$hashKey": "object:5479",
+          "color": "#240046",
+          "text": "Inlet jam"
+        },
+        {
+          "$$hashKey": "object:5482",
+          "color": "#5a189a",
+          "text": "Outlet jam"
+        },
+        {
+          "$$hashKey": "object:5485",
+          "color": "#9D4EDD",
+          "text": "Congestion in the bypass flow"
+        },
+        {
+          "$$hashKey": "object:5488",
+          "color": "#E0AAFF",
+          "text": "Other material issues"
+        },
+        {
+          "$$hashKey": "object:5491",
+          "color": "#B89602",
+          "text": "Changeover"
+        },
+        {
+          "$$hashKey": "object:5494",
+          "color": "#ffda3d",
+          "text": "Cleaning"
+        },
+        {
+          "$$hashKey": "object:5497",
+          "color": "#FFEE32",
+          "text": "Emptying"
+        },
+        {
+          "$$hashKey": "object:5500",
+          "color": "#FFE570",
+          "text": "Setting up"
+        },
+        {
+          "$$hashKey": "object:5503",
+          "color": "rgb(67, 67, 255)",
+          "text": "Operator missing"
+        },
+        {
+          "$$hashKey": "object:5506",
+          "color": "#0077B6",
+          "text": "Break"
+        },
+        {
+          "$$hashKey": "object:5509",
+          "color": "#BC3908",
+          "text": "Equipment failure"
+        },
+        {
+          "$$hashKey": "object:5512",
+          "color": "#E04209",
+          "text": "External failure"
+        },
+        {
+          "$$hashKey": "object:5515",
+          "color": "#FF7900",
+          "text": "External interference"
+        },
+        {
+          "$$hashKey": "object:5518",
+          "color": "#FAA15C",
+          "text": "Maintenance"
+        },
+        {
+          "$$hashKey": "object:5521",
+          "color": "#FFB607",
+          "text": "Other technical issue"
+        },
+        {
+          "$$hashKey": "object:5524",
+          "color": "#A1ADAD",
+          "text": "No shift"
+        },
+        {
+          "$$hashKey": "object:5527",
+          "color": "#6FFFE9",
+          "text": "No order"
+        },
+        {
+          "$$hashKey": "object:5530",
+          "color": "#FF7900",
+          "text": "Crane not available"
+        },
+        {
+          "$$hashKey": "object:5539",
+          "color": "#FA6400",
+          "text": "Equipment failure welder"
+        },
+        {
+          "$$hashKey": "object:5542",
+          "color": "#FA6400",
+          "text": "Equipment failure expender"
+        },
+        {
+          "$$hashKey": "object:5545",
+          "color": "#FA6400",
+          "text": "Equipment failure palletizer"
+        },
+        {
+          "$$hashKey": "object:5548",
+          "color": "#FA6400",
+          "text": "Equipment failure underbody"
+        },
+        {
+          "$$hashKey": "object:5551",
+          "color": "#FA6400",
+          "text": "Equipment failure topcover"
+        }
+      ],
+      "crosshairColor": "#8F070C",
+      "display": "timeline",
+      "expandFromQueryS": 0,
+      "extendLastValue": true,
+      "gridPos": {
+        "h": 5,
+        "w": 22,
+        "x": 2,
+        "y": 7
+      },
+      "highlightOnMouseover": true,
+      "id": 38,
+      "interval": "5m",
+      "legendSortBy": "-ms",
+      "lineColor": "rgba(0,0,0,0.1)",
+      "maxDataPoints": 60,
+      "metricNameColor": "rgb(0, 0, 0)",
+      "pluginVersion": "7.3.7",
+      "rangeMaps": [
+        {
+          "$$hashKey": "object:188",
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "rowHeight": 50,
+      "showDistinctCount": false,
+      "showLegend": true,
+      "showLegendCounts": false,
+      "showLegendNames": false,
+      "showLegendPercent": true,
+      "showLegendTime": false,
+      "showLegendValues": true,
+      "showTimeAxis": true,
+      "showTransitionCount": false,
+      "targets": [
+        {
+          "asset": {
+            "index": 4,
+            "label": "weaving"
+          },
+          "datasource": {
+            "type": "umh-datasource",
+            "uid": "PEE7824128071FA03"
+          },
+          "labelsField": "",
+          "location": {
+            "index": 2,
+            "label": "company"
+          },
+          "parameterString": "",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "uriPathExtension": "",
+          "value": {
+            "index": 1,
+            "label": "state"
+          }
+        }
+      ],
+      "textSize": 24,
+      "textSizeTime": 12,
+      "timeOptions": [
+        {
+          "name": "Years",
+          "value": "years"
+        },
+        {
+          "name": "Months",
+          "value": "months"
+        },
+        {
+          "name": "Weeks",
+          "value": "weeks"
+        },
+        {
+          "name": "Days",
+          "value": "days"
+        },
+        {
+          "name": "Hours",
+          "value": "hours"
+        },
+        {
+          "name": "Minutes",
+          "value": "minutes"
+        },
+        {
+          "name": "Seconds",
+          "value": "seconds"
+        },
+        {
+          "name": "Milliseconds",
+          "value": "milliseconds"
+        }
+      ],
+      "timePrecision": {
+        "name": "Minutes",
+        "value": "minutes"
+      },
+      "timeTextColor": "rgb(56, 56, 56)",
+      "title": "Timeline",
+      "type": "natel-discrete-panel",
+      "units": "short",
+      "use12HourClock": false,
+      "useTimePrecision": false,
+      "valueMaps": [
+        {
+          "$$hashKey": "object:3779",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueTextColor": "rgb(255, 255, 255)",
+      "writeAllValues": false,
+      "writeLastValue": true,
+      "writeMetricNames": false
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 12
+      },
+      "id": 25,
+      "panels": [],
+      "title": "Thermosetting",
+      "type": "row"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 1,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 0,
+        "y": 13
+      },
+      "id": 26,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "asset": {
+            "index": 3,
+            "label": "warping"
+          },
+          "datasource": {
+            "type": "umh-datasource",
+            "uid": "PEE7824128071FA03"
+          },
+          "labelsField": "",
+          "location": {
+            "index": 2,
+            "label": "company"
+          },
+          "parameterString": "",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "uriPathExtension": "",
+          "value": {
+            "index": 9,
+            "label": "oee"
+          }
+        }
+      ],
+      "title": "OEE",
+      "type": "gauge"
+    },
+    {
+      "backgroundColor": "rgba(255, 255, 255, 0.1)",
+      "colorMaps": [
+        {
+          "$$hashKey": "object:183",
+          "color": "#CCC",
+          "text": "N/A"
+        },
+        {
+          "$$hashKey": "object:294",
+          "color": "#37872D",
+          "text": "Maschine läuft"
+        },
+        {
+          "$$hashKey": "object:297",
+          "color": "#96D98D",
+          "text": "Maschine läuft mit verringerter Geschwindigkeit"
+        },
+        {
+          "$$hashKey": "object:300",
+          "color": "rgb(138, 124, 124)",
+          "text": "Keine Daten"
+        },
+        {
+          "$$hashKey": "object:303",
+          "color": "#B81200",
+          "text": "Unbekannter Stopp"
+        },
+        {
+          "$$hashKey": "object:306",
+          "color": "#FF5A47",
+          "text": "Mikrostopp"
+        },
+        {
+          "$$hashKey": "object:309",
+          "color": "#240046",
+          "text": "Mangel am Einlauf"
+        },
+        {
+          "$$hashKey": "object:312",
+          "color": "#5a189a",
+          "text": "Mangel am Auslauf"
+        },
+        {
+          "$$hashKey": "object:315",
+          "color": "#9D4EDD",
+          "text": "Mangel an Hilfsmaterialien"
+        },
+        {
+          "$$hashKey": "object:318",
+          "color": "#E0AAFF",
+          "text": "Sonstige Materialprobleme"
+        },
+        {
+          "$$hashKey": "object:321",
+          "color": "#B89602",
+          "text": "Rüsten"
+        },
+        {
+          "$$hashKey": "object:324",
+          "color": "#ffda3d",
+          "text": "Reinigen"
+        },
+        {
+          "$$hashKey": "object:327",
+          "color": "#FFEE32",
+          "text": "Leeren"
+        },
+        {
+          "$$hashKey": "object:330",
+          "color": "#FFE570",
+          "text": "Vorbereitung"
+        },
+        {
+          "$$hashKey": "object:333",
+          "color": "rgb(67, 67, 255)",
+          "text": "Maschinenbediener fehlt"
+        },
+        {
+          "$$hashKey": "object:336",
+          "color": "#0077B6",
+          "text": "Pause"
+        },
+        {
+          "$$hashKey": "object:339",
+          "color": "#BC3908",
+          "text": "Maschinenstörung"
+        },
+        {
+          "$$hashKey": "object:342",
+          "color": "#E04209",
+          "text": "Externe Störung"
+        },
+        {
+          "$$hashKey": "object:345",
+          "color": "#FF7900",
+          "text": "Sonstige externe Störung"
+        },
+        {
+          "$$hashKey": "object:348",
+          "color": "#FAA15C",
+          "text": "Wartung"
+        },
+        {
+          "$$hashKey": "object:351",
+          "color": "#FFB607",
+          "text": "Sonstige technische Störung"
+        },
+        {
+          "$$hashKey": "object:173",
+          "color": "#A1ADAD",
+          "text": "Keine Schicht"
+        },
+        {
+          "$$hashKey": "object:176",
+          "color": "#6FFFE9",
+          "text": "Kein Auftrag"
+        },
+        {
+          "$$hashKey": "object:194",
+          "color": "#FF7900",
+          "text": "Kran nicht verfügbar"
+        },
+        {
+          "$$hashKey": "object:295",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Schweißer"
+        },
+        {
+          "$$hashKey": "object:296",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Spreizer"
+        },
+        {
+          "$$hashKey": "object:1442",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Oberboden"
+        },
+        {
+          "$$hashKey": "object:1443",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Unterboden"
+        },
+        {
+          "$$hashKey": "object:5464",
+          "color": "#37872D",
+          "text": "Producing"
+        },
+        {
+          "$$hashKey": "object:5467",
+          "color": "#96D98D",
+          "text": "Producing at lower than set speed"
+        },
+        {
+          "$$hashKey": "object:5470",
+          "color": "rgb(138, 124, 124)",
+          "text": "No data"
+        },
+        {
+          "$$hashKey": "object:5473",
+          "color": "#B81200",
+          "text": "Unknown stop"
+        },
+        {
+          "$$hashKey": "object:5476",
+          "color": "#FF5A47",
+          "text": "Microstop"
+        },
+        {
+          "$$hashKey": "object:5479",
+          "color": "#240046",
+          "text": "Inlet jam"
+        },
+        {
+          "$$hashKey": "object:5482",
+          "color": "#5a189a",
+          "text": "Outlet jam"
+        },
+        {
+          "$$hashKey": "object:5485",
+          "color": "#9D4EDD",
+          "text": "Congestion in the bypass flow"
+        },
+        {
+          "$$hashKey": "object:5488",
+          "color": "#E0AAFF",
+          "text": "Other material issues"
+        },
+        {
+          "$$hashKey": "object:5491",
+          "color": "#B89602",
+          "text": "Changeover"
+        },
+        {
+          "$$hashKey": "object:5494",
+          "color": "#ffda3d",
+          "text": "Cleaning"
+        },
+        {
+          "$$hashKey": "object:5497",
+          "color": "#FFEE32",
+          "text": "Emptying"
+        },
+        {
+          "$$hashKey": "object:5500",
+          "color": "#FFE570",
+          "text": "Setting up"
+        },
+        {
+          "$$hashKey": "object:5503",
+          "color": "rgb(67, 67, 255)",
+          "text": "Operator missing"
+        },
+        {
+          "$$hashKey": "object:5506",
+          "color": "#0077B6",
+          "text": "Break"
+        },
+        {
+          "$$hashKey": "object:5509",
+          "color": "#BC3908",
+          "text": "Equipment failure"
+        },
+        {
+          "$$hashKey": "object:5512",
+          "color": "#E04209",
+          "text": "External failure"
+        },
+        {
+          "$$hashKey": "object:5515",
+          "color": "#FF7900",
+          "text": "External interference"
+        },
+        {
+          "$$hashKey": "object:5518",
+          "color": "#FAA15C",
+          "text": "Maintenance"
+        },
+        {
+          "$$hashKey": "object:5521",
+          "color": "#FFB607",
+          "text": "Other technical issue"
+        },
+        {
+          "$$hashKey": "object:5524",
+          "color": "#A1ADAD",
+          "text": "No shift"
+        },
+        {
+          "$$hashKey": "object:5527",
+          "color": "#6FFFE9",
+          "text": "No order"
+        },
+        {
+          "$$hashKey": "object:5530",
+          "color": "#FF7900",
+          "text": "Crane not available"
+        },
+        {
+          "$$hashKey": "object:5539",
+          "color": "#FA6400",
+          "text": "Equipment failure welder"
+        },
+        {
+          "$$hashKey": "object:5542",
+          "color": "#FA6400",
+          "text": "Equipment failure expender"
+        },
+        {
+          "$$hashKey": "object:5545",
+          "color": "#FA6400",
+          "text": "Equipment failure palletizer"
+        },
+        {
+          "$$hashKey": "object:5548",
+          "color": "#FA6400",
+          "text": "Equipment failure underbody"
+        },
+        {
+          "$$hashKey": "object:5551",
+          "color": "#FA6400",
+          "text": "Equipment failure topcover"
+        }
+      ],
+      "crosshairColor": "#8F070C",
+      "display": "timeline",
+      "expandFromQueryS": 0,
+      "extendLastValue": true,
+      "gridPos": {
+        "h": 5,
+        "w": 22,
+        "x": 2,
+        "y": 13
+      },
+      "highlightOnMouseover": true,
+      "id": 36,
+      "interval": "5m",
+      "legendSortBy": "-ms",
+      "lineColor": "rgba(0,0,0,0.1)",
+      "maxDataPoints": 60,
+      "metricNameColor": "rgb(0, 0, 0)",
+      "pluginVersion": "7.3.7",
+      "rangeMaps": [
+        {
+          "$$hashKey": "object:188",
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "rowHeight": 50,
+      "showDistinctCount": false,
+      "showLegend": true,
+      "showLegendCounts": false,
+      "showLegendNames": false,
+      "showLegendPercent": true,
+      "showLegendTime": false,
+      "showLegendValues": true,
+      "showTimeAxis": true,
+      "showTransitionCount": false,
+      "targets": [
+        {
+          "asset": {
+            "index": 1,
+            "label": "printing"
+          },
+          "datasource": {
+            "type": "umh-datasource",
+            "uid": "PEE7824128071FA03"
+          },
+          "labelsField": "",
+          "location": {
+            "index": 1,
+            "label": "company"
+          },
+          "parameterString": "",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "uriPathExtension": "",
+          "value": {
+            "index": 1,
+            "label": "state"
+          }
+        }
+      ],
+      "textSize": 24,
+      "textSizeTime": 12,
+      "timeOptions": [
+        {
+          "name": "Years",
+          "value": "years"
+        },
+        {
+          "name": "Months",
+          "value": "months"
+        },
+        {
+          "name": "Weeks",
+          "value": "weeks"
+        },
+        {
+          "name": "Days",
+          "value": "days"
+        },
+        {
+          "name": "Hours",
+          "value": "hours"
+        },
+        {
+          "name": "Minutes",
+          "value": "minutes"
+        },
+        {
+          "name": "Seconds",
+          "value": "seconds"
+        },
+        {
+          "name": "Milliseconds",
+          "value": "milliseconds"
+        }
+      ],
+      "timePrecision": {
+        "name": "Minutes",
+        "value": "minutes"
+      },
+      "timeTextColor": "rgb(56, 56, 56)",
+      "title": "Timeline",
+      "type": "natel-discrete-panel",
+      "units": "short",
+      "use12HourClock": false,
+      "useTimePrecision": false,
+      "valueMaps": [
+        {
+          "$$hashKey": "object:3779",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueTextColor": "rgb(255, 255, 255)",
+      "writeAllValues": false,
+      "writeLastValue": true,
+      "writeMetricNames": false
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 18
+      },
+      "id": 6,
+      "panels": [],
+      "title": "Printing",
+      "type": "row"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 1,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 0,
+        "y": 19
+      },
+      "id": 41,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "asset": {
+            "index": 2,
+            "label": "thermosetting"
+          },
+          "datasource": {
+            "type": "umh-datasource",
+            "uid": "PEE7824128071FA03"
+          },
+          "labelsField": "",
+          "location": {
+            "index": 2,
+            "label": "company"
+          },
+          "parameterString": "",
+          "refId": "A",
+          "uriPathExtension": "",
+          "value": {
+            "index": 9,
+            "label": "oee"
+          }
+        }
+      ],
+      "title": "OEE",
+      "type": "gauge"
+    },
+    {
+      "backgroundColor": "rgba(255, 255, 255, 0.1)",
+      "colorMaps": [
+        {
+          "$$hashKey": "object:183",
+          "color": "#CCC",
+          "text": "N/A"
+        },
+        {
+          "$$hashKey": "object:294",
+          "color": "#37872D",
+          "text": "Maschine läuft"
+        },
+        {
+          "$$hashKey": "object:297",
+          "color": "#96D98D",
+          "text": "Maschine läuft mit verringerter Geschwindigkeit"
+        },
+        {
+          "$$hashKey": "object:300",
+          "color": "rgb(138, 124, 124)",
+          "text": "Keine Daten"
+        },
+        {
+          "$$hashKey": "object:303",
+          "color": "#B81200",
+          "text": "Unbekannter Stopp"
+        },
+        {
+          "$$hashKey": "object:306",
+          "color": "#FF5A47",
+          "text": "Mikrostopp"
+        },
+        {
+          "$$hashKey": "object:309",
+          "color": "#240046",
+          "text": "Mangel am Einlauf"
+        },
+        {
+          "$$hashKey": "object:312",
+          "color": "#5a189a",
+          "text": "Mangel am Auslauf"
+        },
+        {
+          "$$hashKey": "object:315",
+          "color": "#9D4EDD",
+          "text": "Mangel an Hilfsmaterialien"
+        },
+        {
+          "$$hashKey": "object:318",
+          "color": "#E0AAFF",
+          "text": "Sonstige Materialprobleme"
+        },
+        {
+          "$$hashKey": "object:321",
+          "color": "#B89602",
+          "text": "Rüsten"
+        },
+        {
+          "$$hashKey": "object:324",
+          "color": "#ffda3d",
+          "text": "Reinigen"
+        },
+        {
+          "$$hashKey": "object:327",
+          "color": "#FFEE32",
+          "text": "Leeren"
+        },
+        {
+          "$$hashKey": "object:330",
+          "color": "#FFE570",
+          "text": "Vorbereitung"
+        },
+        {
+          "$$hashKey": "object:333",
+          "color": "rgb(67, 67, 255)",
+          "text": "Maschinenbediener fehlt"
+        },
+        {
+          "$$hashKey": "object:336",
+          "color": "#0077B6",
+          "text": "Pause"
+        },
+        {
+          "$$hashKey": "object:339",
+          "color": "#BC3908",
+          "text": "Maschinenstörung"
+        },
+        {
+          "$$hashKey": "object:342",
+          "color": "#E04209",
+          "text": "Externe Störung"
+        },
+        {
+          "$$hashKey": "object:345",
+          "color": "#FF7900",
+          "text": "Sonstige externe Störung"
+        },
+        {
+          "$$hashKey": "object:348",
+          "color": "#FAA15C",
+          "text": "Wartung"
+        },
+        {
+          "$$hashKey": "object:351",
+          "color": "#FFB607",
+          "text": "Sonstige technische Störung"
+        },
+        {
+          "$$hashKey": "object:173",
+          "color": "#A1ADAD",
+          "text": "Keine Schicht"
+        },
+        {
+          "$$hashKey": "object:176",
+          "color": "#6FFFE9",
+          "text": "Kein Auftrag"
+        },
+        {
+          "$$hashKey": "object:194",
+          "color": "#FF7900",
+          "text": "Kran nicht verfügbar"
+        },
+        {
+          "$$hashKey": "object:295",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Schweißer"
+        },
+        {
+          "$$hashKey": "object:296",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Spreizer"
+        },
+        {
+          "$$hashKey": "object:1442",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Oberboden"
+        },
+        {
+          "$$hashKey": "object:1443",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Unterboden"
+        },
+        {
+          "$$hashKey": "object:5464",
+          "color": "#37872D",
+          "text": "Producing"
+        },
+        {
+          "$$hashKey": "object:5467",
+          "color": "#96D98D",
+          "text": "Producing at lower than set speed"
+        },
+        {
+          "$$hashKey": "object:5470",
+          "color": "rgb(138, 124, 124)",
+          "text": "No data"
+        },
+        {
+          "$$hashKey": "object:5473",
+          "color": "#B81200",
+          "text": "Unknown stop"
+        },
+        {
+          "$$hashKey": "object:5476",
+          "color": "#FF5A47",
+          "text": "Microstop"
+        },
+        {
+          "$$hashKey": "object:5479",
+          "color": "#240046",
+          "text": "Inlet jam"
+        },
+        {
+          "$$hashKey": "object:5482",
+          "color": "#5a189a",
+          "text": "Outlet jam"
+        },
+        {
+          "$$hashKey": "object:5485",
+          "color": "#9D4EDD",
+          "text": "Congestion in the bypass flow"
+        },
+        {
+          "$$hashKey": "object:5488",
+          "color": "#E0AAFF",
+          "text": "Other material issues"
+        },
+        {
+          "$$hashKey": "object:5491",
+          "color": "#B89602",
+          "text": "Changeover"
+        },
+        {
+          "$$hashKey": "object:5494",
+          "color": "#ffda3d",
+          "text": "Cleaning"
+        },
+        {
+          "$$hashKey": "object:5497",
+          "color": "#FFEE32",
+          "text": "Emptying"
+        },
+        {
+          "$$hashKey": "object:5500",
+          "color": "#FFE570",
+          "text": "Setting up"
+        },
+        {
+          "$$hashKey": "object:5503",
+          "color": "rgb(67, 67, 255)",
+          "text": "Operator missing"
+        },
+        {
+          "$$hashKey": "object:5506",
+          "color": "#0077B6",
+          "text": "Break"
+        },
+        {
+          "$$hashKey": "object:5509",
+          "color": "#BC3908",
+          "text": "Equipment failure"
+        },
+        {
+          "$$hashKey": "object:5512",
+          "color": "#E04209",
+          "text": "External failure"
+        },
+        {
+          "$$hashKey": "object:5515",
+          "color": "#FF7900",
+          "text": "External interference"
+        },
+        {
+          "$$hashKey": "object:5518",
+          "color": "#FAA15C",
+          "text": "Maintenance"
+        },
+        {
+          "$$hashKey": "object:5521",
+          "color": "#FFB607",
+          "text": "Other technical issue"
+        },
+        {
+          "$$hashKey": "object:5524",
+          "color": "#A1ADAD",
+          "text": "No shift"
+        },
+        {
+          "$$hashKey": "object:5527",
+          "color": "#6FFFE9",
+          "text": "No order"
+        },
+        {
+          "$$hashKey": "object:5530",
+          "color": "#FF7900",
+          "text": "Crane not available"
+        },
+        {
+          "$$hashKey": "object:5539",
+          "color": "#FA6400",
+          "text": "Equipment failure welder"
+        },
+        {
+          "$$hashKey": "object:5542",
+          "color": "#FA6400",
+          "text": "Equipment failure expender"
+        },
+        {
+          "$$hashKey": "object:5545",
+          "color": "#FA6400",
+          "text": "Equipment failure palletizer"
+        },
+        {
+          "$$hashKey": "object:5548",
+          "color": "#FA6400",
+          "text": "Equipment failure underbody"
+        },
+        {
+          "$$hashKey": "object:5551",
+          "color": "#FA6400",
+          "text": "Equipment failure topcover"
+        }
+      ],
+      "crosshairColor": "#8F070C",
+      "display": "timeline",
+      "expandFromQueryS": 0,
+      "extendLastValue": true,
+      "gridPos": {
+        "h": 5,
+        "w": 22,
+        "x": 2,
+        "y": 19
+      },
+      "highlightOnMouseover": true,
+      "id": 40,
+      "interval": "5m",
+      "legendSortBy": "-ms",
+      "lineColor": "rgba(0,0,0,0.1)",
+      "maxDataPoints": 60,
+      "metricNameColor": "rgb(0, 0, 0)",
+      "pluginVersion": "7.3.7",
+      "rangeMaps": [
+        {
+          "$$hashKey": "object:188",
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "rowHeight": 50,
+      "showDistinctCount": false,
+      "showLegend": true,
+      "showLegendCounts": false,
+      "showLegendNames": false,
+      "showLegendPercent": true,
+      "showLegendTime": false,
+      "showLegendValues": true,
+      "showTimeAxis": true,
+      "showTransitionCount": false,
+      "targets": [
+        {
+          "asset": {
+            "index": 1,
+            "label": "printing"
+          },
+          "datasource": {
+            "type": "umh-datasource",
+            "uid": "PEE7824128071FA03"
+          },
+          "labelsField": "",
+          "location": {
+            "index": 2,
+            "label": "company"
+          },
+          "parameterString": "",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "uriPathExtension": "",
+          "value": {
+            "index": 1,
+            "label": "state"
+          }
+        }
+      ],
+      "textSize": 24,
+      "textSizeTime": 12,
+      "timeOptions": [
+        {
+          "name": "Years",
+          "value": "years"
+        },
+        {
+          "name": "Months",
+          "value": "months"
+        },
+        {
+          "name": "Weeks",
+          "value": "weeks"
+        },
+        {
+          "name": "Days",
+          "value": "days"
+        },
+        {
+          "name": "Hours",
+          "value": "hours"
+        },
+        {
+          "name": "Minutes",
+          "value": "minutes"
+        },
+        {
+          "name": "Seconds",
+          "value": "seconds"
+        },
+        {
+          "name": "Milliseconds",
+          "value": "milliseconds"
+        }
+      ],
+      "timePrecision": {
+        "name": "Minutes",
+        "value": "minutes"
+      },
+      "timeTextColor": "rgb(56, 56, 56)",
+      "title": "Timeline",
+      "type": "natel-discrete-panel",
+      "units": "short",
+      "use12HourClock": false,
+      "useTimePrecision": false,
+      "valueMaps": [
+        {
+          "$$hashKey": "object:3779",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueTextColor": "rgb(255, 255, 255)",
+      "writeAllValues": false,
+      "writeLastValue": true,
+      "writeMetricNames": false
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 24
+      },
+      "id": 8,
+      "panels": [],
+      "title": "Cutting",
+      "type": "row"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 1,
+          "mappings": [],
+          "max": 1,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percentunit"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 2,
+        "x": 0,
+        "y": 25
+      },
+      "id": 21,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "mean"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "text": {}
+      },
+      "pluginVersion": "8.3.4",
+      "targets": [
+        {
+          "asset": {
+            "index": 0,
+            "label": "cutting"
+          },
+          "datasource": {
+            "type": "umh-datasource",
+            "uid": "PEE7824128071FA03"
+          },
+          "labelsField": "",
+          "location": {
+            "index": 2,
+            "label": "company"
+          },
+          "parameterString": "",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "uriPathExtension": "",
+          "value": {
+            "index": 9,
+            "label": "oee"
+          }
+        }
+      ],
+      "title": "OEE",
+      "type": "gauge"
+    },
+    {
+      "backgroundColor": "rgba(255, 255, 255, 0.1)",
+      "colorMaps": [
+        {
+          "$$hashKey": "object:183",
+          "color": "#CCC",
+          "text": "N/A"
+        },
+        {
+          "$$hashKey": "object:294",
+          "color": "#37872D",
+          "text": "Maschine läuft"
+        },
+        {
+          "$$hashKey": "object:297",
+          "color": "#96D98D",
+          "text": "Maschine läuft mit verringerter Geschwindigkeit"
+        },
+        {
+          "$$hashKey": "object:300",
+          "color": "rgb(138, 124, 124)",
+          "text": "Keine Daten"
+        },
+        {
+          "$$hashKey": "object:303",
+          "color": "#B81200",
+          "text": "Unbekannter Stopp"
+        },
+        {
+          "$$hashKey": "object:306",
+          "color": "#FF5A47",
+          "text": "Mikrostopp"
+        },
+        {
+          "$$hashKey": "object:309",
+          "color": "#240046",
+          "text": "Mangel am Einlauf"
+        },
+        {
+          "$$hashKey": "object:312",
+          "color": "#5a189a",
+          "text": "Mangel am Auslauf"
+        },
+        {
+          "$$hashKey": "object:315",
+          "color": "#9D4EDD",
+          "text": "Mangel an Hilfsmaterialien"
+        },
+        {
+          "$$hashKey": "object:318",
+          "color": "#E0AAFF",
+          "text": "Sonstige Materialprobleme"
+        },
+        {
+          "$$hashKey": "object:321",
+          "color": "#B89602",
+          "text": "Rüsten"
+        },
+        {
+          "$$hashKey": "object:324",
+          "color": "#ffda3d",
+          "text": "Reinigen"
+        },
+        {
+          "$$hashKey": "object:327",
+          "color": "#FFEE32",
+          "text": "Leeren"
+        },
+        {
+          "$$hashKey": "object:330",
+          "color": "#FFE570",
+          "text": "Vorbereitung"
+        },
+        {
+          "$$hashKey": "object:333",
+          "color": "rgb(67, 67, 255)",
+          "text": "Maschinenbediener fehlt"
+        },
+        {
+          "$$hashKey": "object:336",
+          "color": "#0077B6",
+          "text": "Pause"
+        },
+        {
+          "$$hashKey": "object:339",
+          "color": "#BC3908",
+          "text": "Maschinenstörung"
+        },
+        {
+          "$$hashKey": "object:342",
+          "color": "#E04209",
+          "text": "Externe Störung"
+        },
+        {
+          "$$hashKey": "object:345",
+          "color": "#FF7900",
+          "text": "Sonstige externe Störung"
+        },
+        {
+          "$$hashKey": "object:348",
+          "color": "#FAA15C",
+          "text": "Wartung"
+        },
+        {
+          "$$hashKey": "object:351",
+          "color": "#FFB607",
+          "text": "Sonstige technische Störung"
+        },
+        {
+          "$$hashKey": "object:173",
+          "color": "#A1ADAD",
+          "text": "Keine Schicht"
+        },
+        {
+          "$$hashKey": "object:176",
+          "color": "#6FFFE9",
+          "text": "Kein Auftrag"
+        },
+        {
+          "$$hashKey": "object:194",
+          "color": "#FF7900",
+          "text": "Kran nicht verfügbar"
+        },
+        {
+          "$$hashKey": "object:295",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Schweißer"
+        },
+        {
+          "$$hashKey": "object:296",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Spreizer"
+        },
+        {
+          "$$hashKey": "object:1442",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Oberboden"
+        },
+        {
+          "$$hashKey": "object:1443",
+          "color": "#FA6400",
+          "text": "Maschinenstörung Unterboden"
+        },
+        {
+          "$$hashKey": "object:5464",
+          "color": "#37872D",
+          "text": "Producing"
+        },
+        {
+          "$$hashKey": "object:5467",
+          "color": "#96D98D",
+          "text": "Producing at lower than set speed"
+        },
+        {
+          "$$hashKey": "object:5470",
+          "color": "rgb(138, 124, 124)",
+          "text": "No data"
+        },
+        {
+          "$$hashKey": "object:5473",
+          "color": "#B81200",
+          "text": "Unknown stop"
+        },
+        {
+          "$$hashKey": "object:5476",
+          "color": "#FF5A47",
+          "text": "Microstop"
+        },
+        {
+          "$$hashKey": "object:5479",
+          "color": "#240046",
+          "text": "Inlet jam"
+        },
+        {
+          "$$hashKey": "object:5482",
+          "color": "#5a189a",
+          "text": "Outlet jam"
+        },
+        {
+          "$$hashKey": "object:5485",
+          "color": "#9D4EDD",
+          "text": "Congestion in the bypass flow"
+        },
+        {
+          "$$hashKey": "object:5488",
+          "color": "#E0AAFF",
+          "text": "Other material issues"
+        },
+        {
+          "$$hashKey": "object:5491",
+          "color": "#B89602",
+          "text": "Changeover"
+        },
+        {
+          "$$hashKey": "object:5494",
+          "color": "#ffda3d",
+          "text": "Cleaning"
+        },
+        {
+          "$$hashKey": "object:5497",
+          "color": "#FFEE32",
+          "text": "Emptying"
+        },
+        {
+          "$$hashKey": "object:5500",
+          "color": "#FFE570",
+          "text": "Setting up"
+        },
+        {
+          "$$hashKey": "object:5503",
+          "color": "rgb(67, 67, 255)",
+          "text": "Operator missing"
+        },
+        {
+          "$$hashKey": "object:5506",
+          "color": "#0077B6",
+          "text": "Break"
+        },
+        {
+          "$$hashKey": "object:5509",
+          "color": "#BC3908",
+          "text": "Equipment failure"
+        },
+        {
+          "$$hashKey": "object:5512",
+          "color": "#E04209",
+          "text": "External failure"
+        },
+        {
+          "$$hashKey": "object:5515",
+          "color": "#FF7900",
+          "text": "External interference"
+        },
+        {
+          "$$hashKey": "object:5518",
+          "color": "#FAA15C",
+          "text": "Maintenance"
+        },
+        {
+          "$$hashKey": "object:5521",
+          "color": "#FFB607",
+          "text": "Other technical issue"
+        },
+        {
+          "$$hashKey": "object:5524",
+          "color": "#A1ADAD",
+          "text": "No shift"
+        },
+        {
+          "$$hashKey": "object:5527",
+          "color": "#6FFFE9",
+          "text": "No order"
+        },
+        {
+          "$$hashKey": "object:5530",
+          "color": "#FF7900",
+          "text": "Crane not available"
+        },
+        {
+          "$$hashKey": "object:5539",
+          "color": "#FA6400",
+          "text": "Equipment failure welder"
+        },
+        {
+          "$$hashKey": "object:5542",
+          "color": "#FA6400",
+          "text": "Equipment failure expender"
+        },
+        {
+          "$$hashKey": "object:5545",
+          "color": "#FA6400",
+          "text": "Equipment failure palletizer"
+        },
+        {
+          "$$hashKey": "object:5548",
+          "color": "#FA6400",
+          "text": "Equipment failure underbody"
+        },
+        {
+          "$$hashKey": "object:5551",
+          "color": "#FA6400",
+          "text": "Equipment failure topcover"
+        }
+      ],
+      "crosshairColor": "#8F070C",
+      "display": "timeline",
+      "expandFromQueryS": 0,
+      "extendLastValue": true,
+      "gridPos": {
+        "h": 5,
+        "w": 22,
+        "x": 2,
+        "y": 25
+      },
+      "highlightOnMouseover": true,
+      "id": 37,
+      "interval": "5m",
+      "legendSortBy": "-ms",
+      "lineColor": "rgba(0,0,0,0.1)",
+      "maxDataPoints": 60,
+      "metricNameColor": "rgb(0, 0, 0)",
+      "pluginVersion": "7.3.7",
+      "rangeMaps": [
+        {
+          "$$hashKey": "object:188",
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "rowHeight": 50,
+      "showDistinctCount": false,
+      "showLegend": true,
+      "showLegendCounts": false,
+      "showLegendNames": false,
+      "showLegendPercent": true,
+      "showLegendTime": false,
+      "showLegendValues": true,
+      "showTimeAxis": true,
+      "showTransitionCount": false,
+      "targets": [
+        {
+          "asset": {
+            "index": 0,
+            "label": "cutting"
+          },
+          "datasource": {
+            "type": "umh-datasource",
+            "uid": "PEE7824128071FA03"
+          },
+          "labelsField": "",
+          "location": {
+            "index": 2,
+            "label": "company"
+          },
+          "parameterString": "",
+          "queryType": "randomWalk",
+          "refId": "A",
+          "uriPathExtension": "",
+          "value": {
+            "index": 1,
+            "label": "state"
+          }
+        }
+      ],
+      "textSize": 24,
+      "textSizeTime": 12,
+      "timeOptions": [
+        {
+          "name": "Years",
+          "value": "years"
+        },
+        {
+          "name": "Months",
+          "value": "months"
+        },
+        {
+          "name": "Weeks",
+          "value": "weeks"
+        },
+        {
+          "name": "Days",
+          "value": "days"
+        },
+        {
+          "name": "Hours",
+          "value": "hours"
+        },
+        {
+          "name": "Minutes",
+          "value": "minutes"
+        },
+        {
+          "name": "Seconds",
+          "value": "seconds"
+        },
+        {
+          "name": "Milliseconds",
+          "value": "milliseconds"
+        }
+      ],
+      "timePrecision": {
+        "name": "Minutes",
+        "value": "minutes"
+      },
+      "timeTextColor": "rgb(56, 56, 56)",
+      "title": "Timeline",
+      "type": "natel-discrete-panel",
+      "units": "short",
+      "use12HourClock": false,
+      "useTimePrecision": false,
+      "valueMaps": [
+        {
+          "$$hashKey": "object:3779",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueTextColor": "rgb(255, 255, 255)",
+      "writeAllValues": false,
+      "writeLastValue": true,
+      "writeMetricNames": false
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 34,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-7d",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Factory view",
+  "uid": "t9EQwhknz",
+  "version": 15,
+  "weekStart": ""
+}

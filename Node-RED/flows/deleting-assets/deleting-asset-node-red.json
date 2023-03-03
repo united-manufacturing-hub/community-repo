@@ -1,0 +1,113 @@
+[
+  {
+    "id": "30c80fc671ab9f1b",
+    "type": "inject",
+    "z": "0e5fe7d6b845a9c0",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "SELECT id FROM assettable WHERE location='212')",
+    "payloadType": "str",
+    "x": 110,
+    "y": 140,
+    "wires": [
+      [
+        "33ac2ee94a8919ed"
+      ]
+    ]
+  },
+  {
+    "id": "330e2cf408c0e64a",
+    "type": "debug",
+    "z": "0e5fe7d6b845a9c0",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "targetType": "full",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1010,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "aa7e64072ffe648e",
+    "type": "template",
+    "z": "0e5fe7d6b845a9c0",
+    "name": "SELECT ",
+    "field": "query",
+    "fieldType": "msg",
+    "format": "sql",
+    "syntax": "mustache",
+    "template": "BEGIN;\nWITH assets_to_be_deleted AS (SELECT id FROM assettable WHERE location='{{query.values}}')\nDELETE FROM shifttable WHERE asset_id IN (SELECT id FROM assets_to_be_deleted);\n\nWITH assets_to_be_deleted AS (SELECT id FROM assettable WHERE location='{{query.values}}')\nDELETE FROM counttable WHERE asset_id IN (SELECT id FROM assets_to_be_deleted);\n\nWITH assets_to_be_deleted AS (SELECT id FROM assettable WHERE location='{{query.values}}')\nDELETE FROM ordertable WHERE asset_id IN (SELECT id FROM assets_to_be_deleted);\n\nWITH assets_to_be_deleted AS (SELECT id FROM assettable WHERE location='{{query.values}}')\nDELETE FROM processvaluestringtable WHERE asset_id IN (SELECT id FROM assets_to_be_deleted);\n\nWITH assets_to_be_deleted AS (SELECT id FROM assettable WHERE location='{{query.values}}')\nDELETE FROM processvaluetable WHERE asset_id IN (SELECT id FROM assets_to_be_deleted);\n\nWITH assets_to_be_deleted AS (SELECT id FROM assettable WHERE location='{{query.values}}')\nDELETE FROM producttable WHERE asset_id IN (SELECT id FROM assets_to_be_deleted);\n\nWITH assets_to_be_deleted AS (SELECT id FROM assettable WHERE location='{{query.values}}')\nDELETE FROM shifttable WHERE asset_id IN (SELECT id FROM assets_to_be_deleted);\n\nWITH assets_to_be_deleted AS (SELECT id FROM assettable WHERE location='{{query.values}}')\nDELETE FROM statetable WHERE asset_id IN (SELECT id FROM assets_to_be_deleted);\n\nWITH assets_to_be_deleted AS (SELECT id FROM assettable WHERE location='{{query.values}}')\nDELETE FROM assettable WHERE id IN (SELECT id FROM assets_to_be_deleted);\n\nCOMMIT;",
+    "output": "str",
+    "x": 640,
+    "y": 140,
+    "wires": [
+      [
+        "9f7cdfe144d8370f"
+      ]
+    ]
+  },
+  {
+    "id": "33ac2ee94a8919ed",
+    "type": "change",
+    "z": "0e5fe7d6b845a9c0",
+    "name": "change value of query to your asset",
+    "rules": [
+      {
+        "t": "set",
+        "p": "query.values",
+        "pt": "msg",
+        "to": "G12",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "",
+        "tot": "str"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 370,
+    "y": 140,
+    "wires": [
+      [
+        "aa7e64072ffe648e"
+      ]
+    ]
+  },
+  {
+    "id": "9f7cdfe144d8370f",
+    "type": "digitaloak-postgresql-query",
+    "z": "0e5fe7d6b845a9c0",
+    "name": "",
+    "server": "",
+    "inputs": 1,
+    "outputs": 1,
+    "x": 810,
+    "y": 140,
+    "wires": [
+      [
+        "330e2cf408c0e64a"
+      ]
+    ]
+  }
+]

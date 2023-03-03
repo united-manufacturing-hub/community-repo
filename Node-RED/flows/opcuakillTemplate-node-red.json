@@ -1,0 +1,117 @@
+[
+  {
+    "id":"202726bbeb8df37b",
+    "type":"tab",
+    "label":"Flow 2",
+    "disabled":false,
+    "info":""
+  },
+  {
+    "id":"4ce709a77f758ea3",
+    "type":"status",
+    "z":"202726bbeb8df37b",
+    "name":"",
+    "scope":[
+      "cd1076714bf4d567"
+    ],
+    "x":500,
+    "y":180,
+    "wires":[
+      [
+        "76ab45bb87794df6"
+      ]
+    ]
+  },
+  {
+    "id":"db8bc15babb104a2",
+    "type":"switch",
+    "z":"202726bbeb8df37b",
+    "name":"Only let errors pass",
+    "property":"status.fill",
+    "propertyType":"msg",
+    "rules":[
+      {
+        "t":"eq",
+        "v":"red",
+        "vt":"str"
+      }
+    ],
+    "checkall":"true",
+    "repair":false,
+    "outputs":1,
+    "x":1110,
+    "y":180,
+    "wires":[
+      [
+        "ef2edd19e9b94e1a"
+      ]
+    ]
+  },
+  {
+    "id":"76ab45bb87794df6",
+    "type":"rbe",
+    "z":"202726bbeb8df37b",
+    "name":"Let onlystatus changes pass (prevent too many triggers)",
+    "func":"rbe",
+    "gap":"",
+    "start":"",
+    "inout":"out",
+    "septopics":true,
+    "property":"status.fill",
+    "topi":"topic",
+    "x":790,
+    "y":180,
+    "wires":[
+      [
+        "db8bc15babb104a2"
+      ]
+    ]
+  },
+  {
+    "id":"d0b39e5972da3b70",
+    "type":"exec",
+    "z":"202726bbeb8df37b",
+    "command":"killall node-red",
+    "addpay":false,
+    "append":"",
+    "useSpawn":"false",
+    "timer":"",
+    "winHide":false,
+    "oldrc":false,
+    "name":"",
+    "x":1440,
+    "y":180,
+    "wires":[
+      [
+
+      ],
+      [
+
+      ],
+      [
+
+      ]
+    ]
+  },
+  {
+    "id":"ef2edd19e9b94e1a",
+    "type":"function",
+    "z":"202726bbeb8df37b",
+    "name":"",
+    "func":"console.log(\"OPC/UA node error. Conducting Soduko. Error: \" + msg.status.text);\nreturn msg;",
+    "outputs":1,
+    "noerr":0,
+    "initialize":"",
+    "finalize":"",
+    "libs":[
+
+    ],
+    "x":1280,
+    "y":180,
+    "wires":[
+      [
+        "d0b39e5972da3b70"
+      ]
+    ]
+  }
+]
