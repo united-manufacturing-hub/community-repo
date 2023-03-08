@@ -1,0 +1,102 @@
+[
+    {
+        "id": "7427a6ad9ebbccbd",
+        "type": "subflow",
+        "name": "add prefix",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 140,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "1ec75c8da98331ea"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 460,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "1ec75c8da98331ea",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "prefix",
+                "type": "str",
+                "value": "",
+                "ui": {
+                    "icon": "font-awesome/fa-font",
+                    "label": {
+                        "en-US": "prefix"
+                    },
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "str"
+                        ]
+                    }
+                }
+            },
+            {
+                "name": "cTime",
+                "type": "bool",
+                "value": "true",
+                "ui": {
+                    "label": {
+                        "en-US": "timestamp unchanged"
+                    },
+                    "type": "checkbox"
+                }
+            },
+            {
+                "name": "rTime",
+                "type": "bool",
+                "value": "false",
+                "ui": {
+                    "label": {
+                        "en-US": "remove timestamp"
+                    },
+                    "type": "checkbox"
+                }
+            }
+        ],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "1ec75c8da98331ea",
+        "type": "function",
+        "z": "7427a6ad9ebbccbd",
+        "name": "add prefix",
+        "func": "/* let obj = msg.payload;\nlet pre = env.get(\"prefix\")+\"_\";\nlet nObj = Object.keys(obj).reduce((a, c) => (a[`${pre}${c}`] = obj[c], a), {});\nmsg.payload = nObj;\n\nreturn msg;\n*/\n\nlet pre = env.get(\"prefix\") + \"_\";\n\nlet nObj = {};\nfor (const [key, value] of Object.entries(msg.payload)) {\n    if (key == \"timestamp_ms\" && env.get(\"rTime\")) {\n        // skip object\n    }\n    else if (key == \"timestamp_ms\" && env.get(\"cTime\") && !env.get(\"rTime\")) {\n        nObj[key] = value;\n    }\n    else {\n        nObj[pre + \"_\" + key] = value;\n    }\n}\n\nmsg.payload = nObj;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "deb3186df36fe554",
+        "type": "comment",
+        "z": "7427a6ad9ebbccbd",
+        "name": "",
+        "info": "Add how many prefix you like to have.\nfor example have data:43 and add \nprefix super the output will be:\nsuper_data:43\nif you add prefix super_extra_special \nthe output will be:\nsuper_extra_special_data:43\n\nFunction looks for \"timestamp_ms\" and you \ncan choose in the enviromnent settings \nif the function should leave the \ntimestamp_ms unchanged without a prefix \nor if it should be removed completly ",
+        "x": 280,
+        "y": 180,
+        "wires": []
+    }
+]
